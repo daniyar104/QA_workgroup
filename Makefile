@@ -24,7 +24,7 @@ env-port-forward:
 
 env-port-close:
 	@docker compose down -d port-forwarder
-	
+
 migrate-create:
 	@if [ ~z "${seq}"]; then \
 		echo "Example: make migrate-create seq=init"; \
@@ -54,3 +54,5 @@ migrate-action:
 
 
 
+qaApp-run:
+	@go run cmd/qaApp/main.go
